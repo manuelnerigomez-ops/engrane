@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Engrane 3D en Realidad Aumentada</title>
+
+<!-- AFRAME -->
+<script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+
+<!-- ARJS -->
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+<style>
+
+body{
+    margin:0;
+    overflow:hidden;
+    font-family:Arial;
+}
+
+#panel{
+
+    position:absolute;
+
+    top:10px;
+
+    left:10px;
+
+    background:white;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    width:340px;
+
+    z-index:999;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="panel">
+
+<h2>Engrane 3D</h2>
+
+<p>
+
+Modelo educativo en Realidad Aumentada
+
+</p>
+
+<p>
+
+Partes representadas:
+
+</p>
+
+<ul>
+
+<li>Dientes</li>
+
+<li>Cubo</li>
+
+<li>Radio primitivo</li>
+
+<li>Agujero central</li>
+
+<li>Cara del engrane</li>
+
+<li>Corona</li>
+
+</ul>
+
+</div>
+
+<a-scene
+
+embedded
+
+vr-mode-ui="enabled:false"
+
+renderer="logarithmicDepthBuffer:true;"
+
+arjs="sourceType:webcam;
+      debugUIEnabled:false;">
+
+<!-- MARCADOR -->
+
+<a-marker preset="hiro">
+
+<!-- ===================================== -->
+<!-- CUERPO PRINCIPAL DEL ENGRANE -->
+<!-- ===================================== -->
+
+<a-cylinder
+
+position="0 1 0"
+
+radius="1.5"
+
+height="0.3"
+
+color="#777777">
+
+</a-cylinder>
+
+<!-- ===================================== -->
+<!-- AGUJERO CENTRAL -->
+<!-- ===================================== -->
+
+<a-cylinder
+
+position="0 1 0"
+
+radius="0.35"
+
+height="0.32"
+
+color="#222222">
+
+</a-cylinder>
+
+<!-- ===================================== -->
+<!-- DIENTES -->
+<!-- ===================================== -->
+
+<!-- Se generan manualmente -->
+
+<!-- DIENTE 1 -->
+<a-box position="0 1 1.8"
+width="0.25"
+height="0.3"
+depth="0.25"
+color="#999999"></a-box>
+
+<!-- DIENTE 2 -->
+<a-box position="0.7 1 1.65"
+rotation="0 -25 0"
+width="0.25"
+height="0.3"
+depth="0.25"
+color="#999999"></a-box>
+
+<!-- DIENTE 3 -->
+<a-box position="1.3 1 1.2"
+rotation="0 -45 0"
+width="0.25"
+height="0.3"
+depth="0.25"
+color="#999999"></a-box>
+
+<!-- DIENTE 4 -->
+<a-box position="1.7 1 0.5"
+rotation="0 -70 0"
+width="0.25"
+height="0.3"
+depth="0.25"
+color="#999999"></a-box>
+
+<!-- DIENTE 5 -->
+<a-box position="1.8 1 -0.3"
+rotation="0 -90 0"
+width="0.25"
+height="0.3"
+depth="0.25"
+color="#999999"></a-box>
+
+<!-- DIENTE 6 -->
+<a-box position="1.5 1 -1"
+rotation="0 -120 0"
+width="0.25"
+height="0.3"
+depth="0.25"
+color="#999999"></a-box>
+
+<!-- DIENTE 7 -->
+<a-box position="0.9 1 -1.5"
+rotation="0 -145 0"
+width="0.25"
+height="0.3"
+depth="0.25"
+color="#999999"></a-box>
+
+<!-- DIENTE 8 -->
+<a-box position="0 1 -1.8"
+rotation="0 180 0"
+width="0.25"
+height="0.3"
+depth="0.25"
+color="#999999"></a-box>
+
+<!-- DIENTE 9 -->
+<a-box position="-0.9 1 -1.5"
+rotation="0 145 0"
+width="0.25"
+height="0.3"
+depth="0.25"
+color="#999999"></a-box>
+
+<!-- DIENTE 10 -->
+<a-box position="-1.5 1 -1"
+rotation="0 120 0"
+width="0.25"
+height="0.3"
+depth="0.25"
+color="#999999"></a-box>
+
+<!-- DIENTE 11 -->
+<a-box position="-1.8 1 -0.3"
+rotation="0 90 0"
+width="0.25"
+height="0.3"
+depth="0.25"
+color="#999999"></a-box>
+
+<!-- DIENTE 12 -->
+<a-box position="-1.7 1 0.5"
+rotation="0 70 0"
+width="0.25"
+height="0.3"
+depth="0.25"
+color="#999999"></a-box>
+
+<!-- DIENTE 13 -->
+<a-box position="-1.3 1 1.2"
+rotation="0 45 0"
+width="0.25"
+height="0.3"
+depth="0.25"
+color="#999999"></a-box>
+
+<!-- DIENTE 14 -->
+<a-box position="-0.7 1 1.65"
+rotation="0 25 0"
+width="0.25"
+height="0.3"
+depth="0.25"
+color="#999999"></a-box>
+
+<!-- ===================================== -->
+<!-- ETIQUETAS -->
+<!-- ===================================== -->
+
+<a-text
+
+value="Dientes"
+
+position="2.2 1 0"
+
+color="black"
+
+scale="1.5 1.5 1.5">
+
+</a-text>
+
+<a-text
+
+value="Cubo"
+
+position="0.5 1.5 0"
+
+color="black"
+
+scale="1.2 1.2 1.2">
+
+</a-text>
+
+<a-text
+
+value="Agujero"
+
+position="-1 1.5 0"
+
+color="black"
+
+scale="1.2 1.2 1.2">
+
+</a-text>
+
+<a-text
+
+value="Corona"
+
+position="0 1 2.4"
+
+color="black"
+
+scale="1.2 1.2 1.2">
+
+</a-text>
+
+<!-- ===================================== -->
+<!-- RADIO PRIMITIVO -->
+<!-- ===================================== -->
+
+<a-ring
+
+position="0 1.01 0"
+
+rotation="-90 0 0"
+
+radius-inner="1.18"
+
+radius-outer="1.22"
+
+color="red">
+
+</a-ring>
+
+<a-text
+
+value="Radio primitivo"
+
+position="1.8 1.4 1"
+
+color="red"
+
+scale="1 1 1">
+
+</a-text>
+
+<!-- ===================================== -->
+<!-- LUCES -->
+<!-- ===================================== -->
+
+<a-light
+
+type="ambient"
+
+intensity="0.8">
+
+</a-light>
+
+<a-light
+
+type="directional"
+
+position="2 4 2"
+
+intensity="1">
+
+</a-light>
+
+</a-marker>
+
+<!-- CAMARA -->
+
+<a-entity camera></a-entity>
+
+</a-scene>
+
+<script>
+
+// =====================================
+// ROTACION AUTOMATICA
+// =====================================
+
+const marker = document.querySelector("a-marker");
+
+let angulo = 0;
+
+function animar(){
+
+    angulo += 0.4;
+
+    marker.object3D.rotation.y = angulo * Math.PI/180;
+
+    requestAnimationFrame(animar);
+}
+
+animar();
+
+</script>
+
+</body>
+
+</html>
